@@ -1,0 +1,14 @@
+drop policy if exists "public settings" on public.portfolio_settings;
+drop policy if exists "public projects" on public.projects;
+drop policy if exists "public certificates" on public.certificates;
+drop policy if exists "owner settings" on public.portfolio_settings;
+drop policy if exists "owner project insert" on public.projects;
+drop policy if exists "owner project update" on public.projects;
+drop policy if exists "owner project delete" on public.projects;
+drop policy if exists "owner certificate insert" on public.certificates;
+drop policy if exists "owner certificate update" on public.certificates;
+drop policy if exists "owner certificate delete" on public.certificates;
+drop policy if exists "public files" on storage.objects;
+drop policy if exists "owner file insert" on storage.objects;
+drop policy if exists "owner file update" on storage.objects;
+drop policy if exists "owner file delete" on storage.objects;

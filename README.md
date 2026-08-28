@@ -15,4 +15,15 @@ Static portfolio prepared for GitHub Pages.
 - Projects: replace the placeholder project titles, descriptions and `href="#"` links.
 - Certificates: put certificate files in `assets/certificates/` and update the links.
 
-GitHub Pages is static, so this version does not include the previous admin login or website-based uploads.
+GitHub Pages serves the frontend; Supabase provides the secure login, database, and file uploads.
+
+## Enable the secure dashboard
+
+1. Create a free Supabase project.
+2. Open **SQL Editor**, paste `supabase-setup.sql`, and run it once.
+3. In **Authentication → Users**, create the owner user `linkonsen2003@gmail.com` with your chosen password. Disable public user sign-ups in Auth settings.
+4. Copy the Project URL and Publishable/anon key from **Project Settings → API** into `config.js`. Never use the `service_role` key.
+5. Upload all updated files to the GitHub repository.
+6. Open `https://senlinkon009-dot.github.io/admin.html` to log in and manage uploads.
+
+The database and storage rules only permit the owner email to change content; public visitors have read-only access.

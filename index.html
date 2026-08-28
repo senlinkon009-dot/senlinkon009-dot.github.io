@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dynamic.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <header class="nav-wrap">
@@ -33,7 +35,7 @@
         <div class="quick-stats"><div><strong>4.17</strong><span>SSC GPA</span></div><div><strong>4.50</strong><span>HSC GPA</span></div><div><strong>3</strong><span>Institutions</span></div></div>
       </div>
       <div class="portrait-card" aria-label="Profile photo placeholder">
-        <div class="portrait-placeholder"><span>LS</span><small>Add your photo as<br><b>assets/profile.jpg</b></small></div>
+        <div class="portrait-placeholder" id="profile-photo"><span>LS</span><small>Profile photo</small></div>
         <div class="floating-note">Based in Bangladesh</div>
       </div>
     </section>
@@ -51,7 +53,7 @@
 
     <section class="section projects" id="projects"><div class="container">
       <div class="section-heading light"><div><p class="eyebrow">SELECTED WORK</p><h2>Projects</h2></div><p>Add your real projects here as you build them.</p></div>
-      <div class="project-grid">
+      <div class="project-grid" id="project-grid">
         <article class="project-card featured"><div class="project-art">01</div><div><small>WEB PROJECT</small><h3>Project title</h3><p>Replace this text with a short explanation of the project, the problem it solves and the tools you used.</p><a href="#">Add project link →</a></div></article>
         <article class="project-card"><div class="project-art">02</div><div><small>ACADEMIC PROJECT</small><h3>Project title</h3><p>Add a second project description here.</p><a href="#">Add project link →</a></div></article>
       </div>
@@ -59,12 +61,14 @@
 
     <section class="section container" id="certificates">
       <div class="section-heading"><div><p class="eyebrow">ACHIEVEMENTS</p><h2>Certificates</h2></div><p>Certificates can be added as PDF or image links.</p></div>
-      <div class="certificate-grid"><article><span>✦</span><h3>Certificate title</h3><p>Issuing organization · Year</p><a href="#">View certificate</a></article><article><span>✦</span><h3>Certificate title</h3><p>Issuing organization · Year</p><a href="#">View certificate</a></article></div>
+      <div class="certificate-grid" id="certificate-grid"><article><span>✦</span><h3>Certificate title</h3><p>Add certificates from the owner dashboard.</p></article></div>
     </section>
 
     <section class="contact" id="contact"><div class="container contact-inner"><div><p class="eyebrow">GET IN TOUCH</p><h2>Let’s connect.</h2><p>I’m open to learning opportunities, collaboration and meaningful conversations.</p></div><div class="contact-links"><a href="mailto:linkonsen2003@gmail.com">linkonsen2003@gmail.com <span>↗</span></a><a href="tel:+8801580464542">01580464542 <span>↗</span></a><a href="https://github.com/senlinkon009-dot" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></div></div></section>
   </main>
-  <footer><div class="container"><span>© <span id="year"></span> Linkon SEN</span><a href="#home">Back to top ↑</a></div></footer>
+  <footer><div class="container"><span>© <span id="year"></span> Linkon SEN</span><span><a href="admin.html">Owner login</a> · <a href="#home">Back to top ↑</a></span></div></footer>
+  <script src="config.js"></script>
   <script src="script.js"></script>
+  <script src="portfolio.js"></script>
 </body>
 </html>
