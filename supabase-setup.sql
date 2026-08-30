@@ -1,5 +1,4 @@
 create table if not exists public.portfolio_settings(id integer primary key check(id=1),profile_url text);insert into public.portfolio_settings(id) values(1) on conflict do nothing;
-alter table public.portfolio_settings add column if not exists school_image_url text;alter table public.portfolio_settings add column if not exists college_image_url text;alter table public.portfolio_settings add column if not exists university_image_url text;
 create table if not exists public.projects(id uuid primary key default gen_random_uuid(),title text not null,description text not null,project_url text,image_url text,sort_order integer default 0,created_at timestamptz default now());
 create table if not exists public.certificates(id uuid primary key default gen_random_uuid(),title text not null,issuer text not null,issue_year text,file_url text,created_at timestamptz default now());
 alter table public.portfolio_settings enable row level security;alter table public.projects enable row level security;alter table public.certificates enable row level security;
